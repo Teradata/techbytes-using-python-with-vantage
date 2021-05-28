@@ -13,7 +13,7 @@ Teradata TechBytes are offering a 4-part set of videos about Python in Vantage o
 
 ### The Python TechBytes demo
 
-The present bundle is a demo that offers the entire code for all parts of the "Using Python with Teradata Vantage" TechBytes series. The code has been richly annotated with explanatory comments to guide you through each step. In addition, the package contains in a separate folder all the necessary input data that are needed for the demo. To reproduce the analyses with the present bundle, the following are needed:
+The present bundle is a demo that offers the entire code for all parts of the "Using Python with Teradata Vantage" TechBytes series. The code resides in the Python notebook files, and has been richly annotated with explanatory comments to guide you through each step. In addition, the package contains in a separate folder all the necessary input data that are needed for the demo. To reproduce the analyses with the present bundle, the following are needed:
 
 * A Python interpreter (minimum supported version is 3.5.0) installed on a client machine, and access to a Python repository to install add-on libraries.
 * The Teradata Package for Python **teradataml**, which is freely available for installation at the [PyPI](https://pypi.org/project/teradataml) repository.

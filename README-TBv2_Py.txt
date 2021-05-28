@@ -60,7 +60,9 @@ This compressed container holds synthetic data and accompanies the "Using
 Python with Teradata Vantage" TechBytes demo so you can try out hands-on
 the code examples across the aforementioned parts of this TechBytes demo.
 
-The demo files are Python notebooks
+The demo files are Python notebooks with the code, HTML printouts of completed
+code execution for reference, short presentations about each demo part, and the
+demo data.
 
 The demo data is a collection of 3 data sets in the Inputs/Data/ folder, namely:
 - Accounts
