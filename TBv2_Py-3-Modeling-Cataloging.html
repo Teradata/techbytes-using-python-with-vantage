@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -13072,14 +13072,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13188,8 +13188,8 @@ Licensed under BSD</p>
 <span class="c1">#con = create_context(host = &lt;HOST&gt;, username = &lt;UID&gt;, password = &lt;PWD&gt;, </span>
 <span class="c1">#                     database = &lt;DB_Name&gt;, &quot;temp_database_name&quot; = &lt;Temp_DB_Name&gt;)</span>
 <span class="c1">#</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">create_context</span><span class="p">(</span><span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;tdprd.td.teradata.com&quot;</span><span class="p">,</span> <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;ak186064&quot;</span><span class="p">,</span>
-                            <span class="n">password</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Password:&#39;</span><span class="p">),</span> 
+<span class="n">con</span> <span class="o">=</span> <span class="n">create_context</span><span class="p">(</span><span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;my.sqle.server.com&quot;</span><span class="p">,</span> <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;ak186064&quot;</span><span class="p">,</span>
+                            <span class="n">password</span> <span class="o">=</span> <span class="n">gp</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Password:&#39;</span><span class="p">),</span>
                             <span class="n">logmech</span> <span class="o">=</span> <span class="s2">&quot;LDAP&quot;</span><span class="p">,</span> <span class="n">database</span> <span class="o">=</span> <span class="s2">&quot;TRNG_TECHBYTES&quot;</span><span class="p">,</span>
                             <span class="n">temp_database_name</span> <span class="o">=</span> <span class="s2">&quot;ak186064&quot;</span><span class="p">)</span>
 </pre></div>
@@ -13569,7 +13569,7 @@ Training complete.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>SELECT * FROM XGBoostPredict(
 	ON &#34;ak_TBv2_Test_ADS_Py&#34; AS &#34;input&#34;
-	PARTITION BY ANY 
+	PARTITION BY ANY
 	ON &#34;ak186064&#34;.&#34;ml__td_xgboost0_1619809449480260&#34; AS ModelTable
 	DIMENSION
 	ORDER BY &#34;tree_id&#34;,&#34;iter&#34;,&#34;class_num&#34;
@@ -13732,7 +13732,7 @@ Variable importance analysis complete.
 <span class="k">except</span><span class="p">:</span>
     <span class="k">pass</span>
 
-<span class="n">copy_to_sql</span><span class="p">(</span><span class="n">td_decisionforest_predict</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">if_exists</span> <span class="o">=</span> <span class="s2">&quot;replace&quot;</span><span class="p">,</span> 
+<span class="n">copy_to_sql</span><span class="p">(</span><span class="n">td_decisionforest_predict</span><span class="o">.</span><span class="n">result</span><span class="p">,</span> <span class="n">if_exists</span> <span class="o">=</span> <span class="s2">&quot;replace&quot;</span><span class="p">,</span>
             <span class="n">table_name</span><span class="o">=</span><span class="s2">&quot;ak_TBv2_Py_RandomForest_Scores&quot;</span><span class="p">)</span>
 <span class="n">td_RandomForest_Scores</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="s2">&quot;ak_TBv2_Py_RandomForest_Scores&quot;</span><span class="p">)</span>
 <span class="n">td_RandomForest_Scores</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13754,7 +13754,7 @@ Variable importance analysis complete.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>SELECT * FROM DecisionForestPredict(
 	ON &#34;ak_TBv2_Test_ADS_Py&#34; AS &#34;input&#34;
-	PARTITION BY ANY 
+	PARTITION BY ANY
 	ON &#34;ak186064&#34;.&#34;ml__td_decisionforest0_1619808093298267&#34; AS ModelTable
 	DIMENSION
 	USING
@@ -13973,9 +13973,9 @@ Index: [Success !, The result has been outputted to output tables]
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save the XGBoost and Decision Forest models.</span>
 <span class="c1">#</span>
-<span class="n">save_model</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="n">td_xgboost_model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ak_TBv2_Py_CC_XGB_model&quot;</span><span class="p">,</span> 
+<span class="n">save_model</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="n">td_xgboost_model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ak_TBv2_Py_CC_XGB_model&quot;</span><span class="p">,</span>
            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;TechBytes (Python): XGBoost for credit card analysis&quot;</span><span class="p">)</span>
-<span class="n">save_model</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="n">td_decisionforest_model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ak_TBv2_Py_CC_DF_model&quot;</span><span class="p">,</span> 
+<span class="n">save_model</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="n">td_decisionforest_model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ak_TBv2_Py_CC_DF_model&quot;</span><span class="p">,</span>
            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;TechBytes (Python): DF for credit card analysis&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14091,34 +14091,34 @@ CreatedDate                                 2021-04-30 14:25:35.790000
 
 *** &#39;ak_TBv2_Py_CC_DF_model&#39;: Model Attributes ***
                       AttrName  \
-0                    tree_type   
-1                     nodesize   
-2                    max_depth   
-3                         seed   
-4                     variance   
-5                    mtry_seed   
-6                     outofbag   
-7   display_num_processed_rows   
-8         categorical_encoding   
-9                         mtry   
-10                       ntree   
-11          maxnum_categorical   
-12                     formula   
+0                    tree_type
+1                     nodesize
+2                    max_depth
+3                         seed
+4                     variance
+5                    mtry_seed
+6                     outofbag
+7   display_num_processed_rows
+8         categorical_encoding
+9                         mtry
+10                       ntree
+11          maxnum_categorical
+12                     formula
 
-                                            AttrValue  
-0                                      classification  
-1                                                   1  
-2                                                  12  
-3                                                 100  
-4                                                   0  
-5                                                 100  
-6                                               False  
-7                                               False  
-8                                            graycode  
-9                                                   5  
-10                                                500  
-11                                               1000  
-12  cc_acct_ind ~ income + age + tot_cust_years + ...  
+                                            AttrValue
+0                                      classification
+1                                                   1
+2                                                  12
+3                                                 100
+4                                                   0
+5                                                 100
+6                                               False
+7                                               False
+8                                            graycode
+9                                                   5
+10                                                500
+11                                               1000
+12  cc_acct_ind ~ income + age + tot_cust_years + ...
 
 
 *** &#39;ak_TBv2_Py_CC_DF_model&#39;: Model Training Data ***
@@ -14281,7 +14281,7 @@ Model Objects that can be dropped: [&#39;&#34;ak186064&#34;.&#34;ml__td_sqlmr_ou
   </div>
 </body>
 
- 
+
 
 
 </html>
