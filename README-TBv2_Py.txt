@@ -61,8 +61,11 @@ Python with Teradata Vantage" TechBytes demo so you can try out hands-on
 the code examples across the aforementioned parts of this TechBytes demo.
 
 The demo files are Python notebooks with the code, HTML printouts of completed
-code execution for reference, short presentations about each demo part, and the
-demo data.
+code execution, short presentations about each demo part, and the demo data.
+The notebooks are anonymized; that is, you need to replace the names of target
+systems, databases, and file paths as needed to execute the code on your
+hardware. The HTML printouts illustrate sample code execution with results for
+reference.
 
 The demo data is a collection of 3 data sets in the Inputs/Data/ folder, namely:
 - Accounts
